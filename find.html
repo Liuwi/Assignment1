@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>Liuwis Rest-Raunt</title> 
+	
+<link rel="stylesheet" href="themes/Mytheme.min.css" />
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+function initialize() {
+  var mapProp = {
+    center:new google.maps.LatLng(-37.847594, 145.114894),
+    zoom:10,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+</head> 
+
+<body>  
+<!-- begin index page -->
+<section id="find" data-role="page" data-theme="d">
+	<header data-role="header"><h1>Liuwi's Rest-Raunt</h1></header>
+<!--Navigation Bar -->
+					<div data-role="navbar">
+						<ul>
+							<li><a href="index.html" class="ui-btn-active">Home</a></li>
+							<li><a href="menu.html">Menu</a></li>
+							<li><a href="recipe.html">Special Recipe</a></li>
+							<li><a href="find.html">Contact Us</a></li>
+							<li><a href="feedback.html">Feedback</a></li>
+							<li><a href="developer.html">Developer</a></li>
+						</ul>
+					</div>
+			</div>
+									<center><h2>Where are we Located?</h2></center>
+						<center><p>Come join us for a nice rest and some chillout food! 219-223 Burwood Highway, Burwood East, 3151</p></center>
+
+<center><div id="googleMap" style="width:500px;height:380px;"></div></center>
+
+
+
+	<footer data-role="footer"><h1>&copy; Andrew Liu</h1></footer>
+</section>
+<!-- end first page -->
+     
+</body>
+</html>
